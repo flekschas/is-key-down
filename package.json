@@ -22,7 +22,7 @@
   "scripts": {
     "build": "rollup -c",
     "lint": "eslint index.js rollup.config.js",
-    "precommit": "NODE_ENV=production lint-staged",
+    "precommit": "NODE_ENV=production lint-staged; npm run test",
     "prepublishOnly": "npm run lint",
     "prerelease": "rm -rf dist/*; npm run build; zip -r dist.zip dist",
     "pretest": "npm run lint",
