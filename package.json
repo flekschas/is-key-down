@@ -11,11 +11,11 @@
   ],
   "license": "MIT",
   "main": "dist/is-key-down.js",
-  "module": "src/index.js",
+  "module": "index.js",
   "unpkg": "dist/is-key-down.min.js",
   "jsdelivr": "dist/is-key-down.min.js",
   "files": [
-    "src/index.js",
+    "index.js",
     "dist/is-key-down.js",
     "dist/is-key-down.min.js"
   ],
