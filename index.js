@@ -17,9 +17,16 @@ const keydown = ({ key }) => {
 };
 
 const dispose = () => {
+  const keys = Object.keys(down);
+
+  for (let i = 0; i < keys.length; i++) {
+    down[keys[i]] = undefined;
+    delete down[keys[i]];
+  }
+
   window.removeEventListener("keydown", keydown, false);
   window.removeEventListener("keyup", keyup, false);
-  window.removeEbventListener("blur", reset, false);
+  window.removeEventListener("blur", reset, false);
 };
 
 reset();
