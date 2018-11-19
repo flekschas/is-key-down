@@ -26,7 +26,7 @@
     "prepublishOnly": "npm run lint",
     "prerelease": "rm -rf dist/*; npm run build; zip -r dist.zip dist",
     "pretest": "npm run lint",
-    "test": "node -r esm tests.js | tap-spec"
+    "test": "rollup -c ./rollup.test.config.js | tape-run --render='tap-spec'"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -47,8 +47,11 @@
     "pretty-quick": "^1.8.0",
     "rollup": "^0.67.1",
     "rollup-plugin-buble": "^0.19.4",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-terser": "^3.0.0",
     "tap-spec": "^5.0.0",
+    "tape-run": "^4.0.0",
     "zora": "^2.0.1",
     "webpack": "^4.17.2",
     "webpack-cli": "^3.1.0",
